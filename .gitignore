@@ -1,0 +1,44 @@
+# Composer dependencies
+/vendor/
+/composer.lock
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+/test-results/
+
+# Logs and temp files
+*.log
+*.cache
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+/.idea/
+/.vscode/
+/nbproject/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node and npm-related (if used)
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+
+# Build directories (if you have any build scripts)
+/build/
+/dist/
+
+# Coverage reports (if you generate code coverage reports)
+/coverage/
+
+# Backup files
+*.bak
+*.swp
+*.swo
