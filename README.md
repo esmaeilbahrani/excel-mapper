@@ -29,9 +29,9 @@ use ExcelMapper\Parsers\DefaultParser;
 
 // Define custom column mapping
 $mapping = [
-    0 => ['field' => 'first_name', 'parser' => DefaultParser::class],
-    1 => ['field' => 'last_name', 'parser' => DefaultParser::class],
-    2 => ['field' => 'phone_number', 'parser' => DefaultParser::class],
+    ['first_name', DefaultParser::class],
+    ['last_name', DefaultParser::class],
+    [phone_number', DefaultParser::class],
 ];
 
 // Read Excel file
@@ -62,8 +62,8 @@ class UppercaseParser implements ColumnParserInterface
 Then you can then use this custom parser in your column mappings:
 ```php
 $mapping = [
-    0 => ['field' => 'first_name', 'parser' => UppercaseParser::class],
-    1 => ['field' => 'last_name', 'parser' => UppercaseParser::class],
+    [first_name', UppercaseParser::class],
+    ['last_name', UppercaseParser::class],
 ];
 ```
 
