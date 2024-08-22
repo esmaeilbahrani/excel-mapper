@@ -29,9 +29,9 @@ use ExcelMapper\Parsers\DefaultParser;
 
 // Define custom column mapping
 $mapping = [
-    ['first_name', DefaultParser::class],
-    ['last_name', DefaultParser::class],
-    ['phone_number', DefaultParser::class],
+    'A' => 'first_name',
+    'B' => 'last_name',
+    'C' => ['phone_number', DefaultParser::class],
 ];
 
 // Read Excel file
@@ -72,6 +72,7 @@ You can extend ExcelMapper further by integrating additional functionality or mo
 
 * Creating Custom Readers: Implement your own reader by following the ExcelReaderInterface.
 * Extending Processors: Customize how data is processed by extending the ExcelDataProcessor.
+* Column Mapping by Letter: Map Excel columns by their letter identifier, supporting both single-letter (e.g., 'A') and multi-letter (e.g., 'AA') columns.
 
 ### Testing
 To run tests, make sure you have PHPUnit installed. You can run the tests using the following command:
