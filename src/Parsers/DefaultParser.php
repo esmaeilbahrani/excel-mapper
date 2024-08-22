@@ -14,9 +14,6 @@ class DefaultParser implements ColumnParserInterface
 {
     public function parse(mixed $value): string|array
     {
-        // Convert Persian/Arabic digits to English digits
-        $value = DataHelper::convertDigits($value);
-
-        return $value;
+        return DataHelper::convertDigits($value);
     }
 }
